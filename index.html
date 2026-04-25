@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cybernor Printing - Cetakan premium untuk business card, flyers, logo, banner dan lebih. Harga pukal berpatutan, siap 3 hari bekerja. Port Dickson, penghantaran seluruh Malaysia.">
+    <title>Cybernor Printing | Cetakan Premium Port Dickson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --green:       #1A5E2A;
+            --green-dark:  #0D3B14;
+            --green-mid:   #236B31;
+            --gold:        #FFA800;
+            --gold-dark:   #E09400;
+            --gold-light:  #FFD166;
+            --white:       #FFFFFF;
+            --off-white:   #F6FBF7;
+            --light-gray:  #F4F4F4;
+            --text:        #1F2937;
+            --text-muted:  #6B7280;
+            --border:      #E5E7EB;
+            --radius:      12px;
+            --radius-lg:   20px;
+            --shadow-sm:   0 2px 8px rgba(0,0,0,0.08);
+            --shadow:      0 4px 20px rgba(0,0,0,0.12);
+            --shadow-lg:   0 8px 40px rgba(0,0,0,0.16);
+            --t:           all 0.3s ease;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a   { text-decoration: none; color: inherit; }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .badge-green { background: rgba(26,94,42,0.1); color: var(--green); border: 1px solid rgba(26,94,42,0.25); }
+        .badge-light { background: rgba(255,255,255,0.15); color: var(--gold-light); border: 1px solid rgba(255,255,255,0.3); }
+        .badge-gold  { background: rgba(255,168,0,0.15); color: var(--gold-dark); border: 1px solid rgba(255,168,0,0.4); }
+
+        .section-title {
+            font-size: clamp(1.7rem, 4vw, 2.4rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+        .section-sub {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            max-width: 580px;
+            margin: 0 auto 48px;
+        }
+        .tc { text-align: center; }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 26px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--t);
+            white-space: nowrap;
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: var(--green-dark);
+            border-color: var(--gold);
+        }
+        .btn-gold:hover {
+            background: var(--gold-dark);
+            border-color: var(--gold-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,168,0,0.4);
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--white);
+            border-color: rgba(255,255,255,0.55);
+        }
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--white);
+        }
+        .btn-green {
+            background: var(--green);
+            color: var(--white);
+            border-color: var(--green);
+        }
+        .btn-green:hover {
+            background: var(--green-dark);
+            border-color: var(--green-dark);
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--green);
+            border-color: var(--green);
+        }
+        .btn-outline:hover {
+            background: var(--green);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        .btn-wa {
+            background: #25D366;
+            color: var(--white);
+            border-color: #25D366;
+        }
+        .btn-wa:hover {
+            background: #1da851;
+            border-color: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+        }
+
+        /* ── NAVBAR ── */
+        .nav {
+            position: fixed;
+            inset: 0 0 auto 0;
+            z-index: 1000;
+            background: rgba(13,59,20,0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            transition: var(--t);
+        }
+        .nav.scrolled {
+            background: var(--green-dark);
+            box-shadow: var(--shadow);
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+        .nav-logo img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+        .nav-logo-text { line-height: 1.15; }
+        .nav-logo-text .name { font-size: 0.95rem; font-weight: 700; color: var(--white); }
+        .nav-logo-text .sub  { font-size: 0.6rem; font-weight: 400; color: var(--gold-light); letter-spacing: 1px; text-transform: uppercase; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.83rem;
+            font-weight: 500;
+            padding: 7px 11px;
+            border-radius: 8px;
+            transition: var(--t);
+        }
+        .nav-links a:hover { color: var(--gold); background: rgba(255,255,255,0.08); }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.35rem;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 68px;
+            left: 0; right: 0;
+            background: var(--green-dark);
+            padding: 16px 24px 24px;
+            z-index: 999;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .mobile-nav ul { list-style: none; margin-bottom: 16px; }
+        .mobile-nav ul li a {
+            display: block;
+            color: rgba(255,255,255,0.82);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 11px 14px;
+            border-radius: 8px;
+            transition: var(--t);
+        }
+        .mobile-nav ul li a:hover { color: var(--gold); background: rgba(255,255,255,0.07); }
+        .mobile-nav .btn { width: 100%; justify-content: center; }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 65%, var(--green-mid) 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 8% 15%, rgba(255,168,0,0.09) 0%, transparent 45%),
+                radial-gradient(circle at 92% 85%, rgba(255,168,0,0.06) 0%, transparent 40%);
+        }
+        .hero-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.06);
+            pointer-events: none;
+        }
+        .hero-ring-1 { width: 680px; height: 680px; top: -240px; right: -160px; }
+        .hero-ring-2 { width: 420px; height: 420px; bottom: -120px; left: -100px; }
+        .hero-ring-3 { width: 220px; height: 220px; top: 32%; right: 8%; border-color: rgba(255,168,0,0.14); }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 118px 24px 90px;
+        }
+        .hero-logo {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            margin: 0 auto 28px;
+            filter: drop-shadow(0 4px 18px rgba(0,0,0,0.3));
+        }
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(255,168,0,0.14);
+            border: 1px solid rgba(255,168,0,0.38);
+            color: var(--gold-light);
+            padding: 7px 18px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 22px;
+        }
+        .hero-title {
+            font-size: clamp(2rem, 5.5vw, 3.4rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 22px;
+        }
+        .hero-title span { color: var(--gold); }
+        .hero-sub {
+            font-size: clamp(0.9rem, 2vw, 1.08rem);
+            color: rgba(255,255,255,0.78);
+            font-weight: 300;
+            margin-bottom: 38px;
+            max-width: 580px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-sub strong { color: var(--gold); font-weight: 600; }
+        .hero-cta {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 56px;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 36px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 36px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+        .stat-num   { font-size: 1.7rem; font-weight: 800; color: var(--gold); line-height: 1; }
+        .stat-label { font-size: 0.7rem; color: rgba(255,255,255,0.55); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+        .hero-arrow {
+            position: absolute;
+            bottom: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.45);
+            font-size: 1.3rem;
+            cursor: pointer;
+            z-index: 2;
+            animation: bob 2s ease-in-out infinite;
+        }
+        @keyframes bob {
+            0%,100% { transform: translateX(-50%) translateY(0); }
+            50%      { transform: translateX(-50%) translateY(-8px); }
+        }
+
+        /* ── TENTANG KAMI ── */
+        .about {
+            padding: 96px 0;
+            background: var(--white);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-content .section-sub { text-align: left; margin: 0 0 28px; }
+        .about-quote {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: var(--off-white);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 18px 20px;
+            margin-bottom: 28px;
+        }
+        .about-quote i { color: var(--gold); font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+        .about-quote p { font-size: 0.9rem; font-style: italic; color: var(--text); line-height: 1.7; }
+        .about-body { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 28px; line-height: 1.85; }
+
+        .about-imgs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .about-imgs img {
+            border-radius: var(--radius);
+            object-fit: cover;
+            width: 100%;
+            box-shadow: var(--shadow);
+            transition: transform 0.35s ease;
+        }
+        .about-imgs img:hover { transform: scale(1.03); }
+        .about-imgs img.span2 { grid-column: 1 / -1; height: 190px; }
+        .about-imgs img.small { height: 140px; }
+
+        /* ── SERVIS UTAMA ── */
+        .services {
+            padding: 96px 0;
+            background: var(--light-gray);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+        }
+        .scard {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: var(--t);
+            display: flex;
+            flex-direction: column;
+        }
+        .scard:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+
+        .scard-img-wrap { position: relative; overflow: hidden; }
+        .scard-img {
+            width: 100%;
+            height: 195px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .scard:hover .scard-img { transform: scale(1.05); }
+        .scard-tag {
+            position: absolute;
+            top: 12px; left: 12px;
+            background: var(--gold);
+            color: var(--green-dark);
+            font-size: 0.67rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .scard-body {
+            padding: 22px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .scard-icon {
+            width: 44px; height: 44px;
+            background: rgba(26,94,42,0.09);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--green);
+            font-size: 1.1rem;
+            margin-bottom: 14px;
+        }
+        .scard-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+        .scard-desc  { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 14px; }
+        .scard-features {
+            list-style: none;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        .scard-features li {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            padding: 2px 0;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+        .scard-features li::before { content: '✓'; color: var(--green); font-weight: 700; }
+
+        /* ── SEMUA SERVIS ── */
+        .all-services {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        .tiles {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+        .tile {
+            text-align: center;
+            padding: 26px 14px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: var(--t);
+            cursor: default;
+        }
+        .tile:hover {
+            border-color: var(--green);
+            background: rgba(26,94,42,0.03);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-sm);
+        }
+        .tile-icon {
+            width: 52px; height: 52px;
+            background: rgba(26,94,42,0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 11px;
+            font-size: 1.3rem;
+            color: var(--green);
+            transition: var(--t);
+        }
+        .tile:hover .tile-icon { background: var(--green); color: var(--white); }
+        .tile-name { font-size: 0.85rem; font-weight: 600; }
+
+        /* ── KENAPA KAMI ── */
+        .why {
+            padding: 96px 0;
+            background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .why::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 80% 50%, rgba(255,168,0,0.07) 0%, transparent 55%);
+        }
+        .why .section-title { color: var(--white); }
+        .why .section-sub   { color: rgba(255,255,255,0.65); }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            position: relative;
+            z-index: 1;
+        }
+        .wcard {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.11);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            transition: var(--t);
+        }
+        .wcard:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,168,0,0.35);
+            transform: translateY(-4px);
+        }
+        .wcard-icon {
+            width: 56px; height: 56px;
+            background: rgba(255,168,0,0.14);
+            border: 1px solid rgba(255,168,0,0.28);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--gold);
+            margin-bottom: 18px;
+        }
+        .wcard-title { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 9px; }
+        .wcard-desc  { font-size: 0.84rem; color: rgba(255,255,255,0.68); line-height: 1.75; }
+
+        /* ── GALERI ── */
+        .gallery {
+            padding: 96px 0;
+            background: var(--light-gray);
+        }
+        .gallery-tabs {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+        .tab {
+            padding: 9px 22px;
+            border-radius: 50px;
+            font-size: 0.83rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 2px solid var(--border);
+            color: var(--text-muted);
+            background: var(--white);
+            transition: var(--t);
+        }
+        .tab:hover, .tab.active {
+            background: var(--green);
+            color: var(--white);
+            border-color: var(--green);
+        }
+        .gallery-panel { display: none; }
+        .gallery-panel.active {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+        .gitem {
+            border-radius: var(--radius);
+            overflow: hidden;
+            aspect-ratio: 1;
+            position: relative;
+            box-shadow: var(--shadow-sm);
+        }
+        .gitem img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .gitem:hover img { transform: scale(1.08); }
+        .gitem-over {
+            position: absolute;
+            inset: 0;
+            background: rgba(13,59,20,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--t);
+        }
+        .gitem:hover .gitem-over { opacity: 1; }
+        .gitem-over i { color: var(--white); font-size: 1.4rem; }
+
+        /* ── CTA ── */
+        .cta {
+            padding: 96px 0;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 40%);
+        }
+        .cta-inner { position: relative; z-index: 1; max-width: 660px; margin: 0 auto; }
+        .cta-eye   { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--green-dark); opacity: 0.75; margin-bottom: 14px; }
+        .cta-title { font-size: clamp(1.7rem, 4vw, 2.6rem); font-weight: 800; color: var(--green-dark); line-height: 1.2; margin-bottom: 14px; }
+        .cta-sub   { font-size: 0.95rem; color: var(--green-dark); opacity: 0.8; margin-bottom: 38px; }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--green-dark);
+            color: rgba(255,255,255,0.75);
+            padding: 64px 0 0;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1.1fr;
+            gap: 44px;
+            margin-bottom: 48px;
+        }
+        .footer-logo-row {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin-bottom: 14px;
+        }
+        .footer-logo-row img {
+            width: 44px; height: 44px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+        .footer-logo-row .name { font-size: 1rem; font-weight: 700; color: var(--white); }
+        .footer-logo-row .sub  { font-size: 0.6rem; color: var(--gold-light); text-transform: uppercase; letter-spacing: 1px; }
+        .footer-desc { font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 22px; }
+
+        .socials { display: flex; gap: 10px; }
+        .social-btn {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.65);
+            font-size: 0.88rem;
+            transition: var(--t);
+        }
+        .social-btn:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--green-dark);
+            transform: translateY(-2px);
+        }
+        .footer-col-title {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 18px;
+        }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+        .footer-links a {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.55);
+            transition: var(--t);
+        }
+        .footer-links a:hover { color: var(--gold-light); padding-left: 4px; }
+
+        .contact-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            margin-bottom: 11px;
+        }
+        .contact-row i { color: var(--gold); font-size: 0.85rem; margin-top: 3px; flex-shrink: 0; }
+        .contact-row span, .contact-row a {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.6;
+            transition: var(--t);
+        }
+        .contact-row a:hover { color: var(--gold-light); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 22px 24px;
+            max-width: 1180px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .footer-bottom p, .footer-bottom a {
+            font-size: 0.76rem;
+            color: rgba(255,255,255,0.35);
+        }
+        .footer-bottom a:hover { color: rgba(255,255,255,0.65); }
+        .footer-bottom-links { display: flex; gap: 18px; }
+
+        /* ── FLOAT WHATSAPP ── */
+        .float-wa {
+            position: fixed;
+            bottom: 26px; right: 26px;
+            z-index: 999;
+            width: 54px; height: 54px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.55rem;
+            box-shadow: 0 4px 18px rgba(37,211,102,0.55);
+            transition: var(--t);
+            animation: pulse-wa 2.5s infinite;
+        }
+        .float-wa:hover { transform: scale(1.1); animation: none; }
+        @keyframes pulse-wa {
+            0%,100% { box-shadow: 0 4px 18px rgba(37,211,102,0.55); }
+            50%      { box-shadow: 0 4px 36px rgba(37,211,102,0.85), 0 0 0 10px rgba(37,211,102,0.1); }
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid   { grid-template-columns: 1fr 1fr; gap: 32px; }
+            .about-grid    { gap: 36px; }
+        }
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta { display: none; }
+            .hamburger { display: block; }
+
+            .about-grid { grid-template-columns: 1fr; }
+            .about-imgs { order: -1; }
+
+            .services-grid { grid-template-columns: 1fr; }
+            .tiles { grid-template-columns: repeat(2, 1fr); }
+            .why-grid { grid-template-columns: 1fr; }
+            .gallery-panel.active { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+        @media (max-width: 480px) {
+            .hero-cta { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 300px; justify-content: center; }
+            .hero-stats { gap: 20px; }
+        }
+
+        /* FADE IN */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.55s ease, transform 0.55s ease;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+<!-- Float WhatsApp -->
+<a href="https://wa.me/601111161651" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp Cybernor Printing">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#utama" class="nav-logo">
+            <img src="logo.jpeg" alt="Cybernor Printing">
+            <div class="nav-logo-text">
+                <div class="name">Cybernor Printing</div>
+                <div class="sub">Premium Print Solution</div>
+            </div>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#utama">Utama</a></li>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#servis">Servis</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#hubungi">Hubungi</a></li>
+        </ul>
+
+        <div class="nav-cta">
+            <a href="https://wa.me/601111161651" class="btn btn-gold" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> WhatsApp Kami
+            </a>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Buka menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+    <ul>
+        <li><a href="#utama"   onclick="closeNav()">Utama</a></li>
+        <li><a href="#tentang" onclick="closeNav()">Tentang Kami</a></li>
+        <li><a href="#servis"  onclick="closeNav()">Servis</a></li>
+        <li><a href="#galeri"  onclick="closeNav()">Galeri</a></li>
+        <li><a href="#hubungi" onclick="closeNav()">Hubungi</a></li>
+    </ul>
+    <a href="https://wa.me/601111161651" class="btn btn-wa" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i> WhatsApp Kami Sekarang
+    </a>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="utama">
+    <div class="hero-ring hero-ring-1"></div>
+    <div class="hero-ring hero-ring-2"></div>
+    <div class="hero-ring hero-ring-3"></div>
+
+    <div class="container">
+        <div class="hero-content">
+            <img src="logo.jpeg" alt="Cybernor Printing" class="hero-logo">
+
+            <div class="hero-pill">
+                <i class="fas fa-map-marker-alt"></i>
+                Port Dickson &nbsp;·&nbsp; Penghantaran Seluruh Malaysia
+            </div>
+
+            <h1 class="hero-title">
+                Cetak <span>Lebih Profesional.</span><br>
+                Bayar <span>Lebih Berpatutan.</span>
+            </h1>
+
+            <p class="hero-sub">
+                Daripada Business Card hinggalah Wedding Card — kami hasilkan cetakan berkualiti premium untuk tingkatkan imej jenama anda. Siap dalam <strong>3 hari bekerja</strong>, penghantaran pos selamat ke seluruh Malaysia.
+            </p>
+
+            <div class="hero-cta">
+                <a href="https://wa.me/601111161651?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20mengenai%20servis%20cetakan%20Cybernor%20Printing." class="btn btn-gold" target="_blank" rel="noopener" style="font-size:0.95rem;padding:15px 30px;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Kami Sekarang
+                </a>
+                <a href="#servis" class="btn btn-ghost" style="font-size:0.95rem;padding:15px 30px;">
+                    <i class="fas fa-th-large"></i> Lihat Servis Kami
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="tc">
+                    <div class="stat-num">8+</div>
+                    <div class="stat-label">Jenis Servis</div>
+                </div>
+                <div class="tc">
+                    <div class="stat-num">3</div>
+                    <div class="stat-label">Hari Siap</div>
+                </div>
+                <div class="tc">
+                    <div class="stat-num">RM20</div>
+                    <div class="stat-label">Reka Bentuk Dari</div>
+                </div>
+                <div class="tc">
+                    <div class="stat-num">MY</div>
+                    <div class="stat-label">Penghantaran Pos</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-arrow" onclick="scrollTo('tentang')">
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+<!-- ═══════════ TENTANG KAMI ═══════════ -->
+<section class="about" id="tentang">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-content fade-in">
+                <span class="badge badge-green">Tentang Kami</span>
+                <h2 class="section-title">Misi Kami: Tingkatkan<br>Imej Jenama Anda</h2>
+                <p class="section-sub" style="text-align:left;margin:0 0 26px;">
+                    Cybernor Printing hadir untuk membantu usahawan dan perniagaan kecil (SME) tampil lebih profesional tanpa membebankan kos yang tinggi.
+                </p>
+
+                <div class="about-quote">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Kami percaya setiap perniagaan — tidak kira besar atau kecil — berhak mendapat cetakan berkualiti premium pada harga yang mampu dimiliki."</p>
+                </div>
+
+                <p class="about-body">
+                    Berpusat di <strong>Port Dickson, Negeri Sembilan</strong>, kami melayan tempahan dari seluruh Malaysia melalui penghantaran pos yang selamat dan pantas. Setiap cetakan diproses dengan teliti menggunakan bahan berkualiti tinggi supaya jenama anda kelihatan terbaik di mata pelanggan.
+                </p>
+
+                <a href="https://wa.me/601111161651" class="btn btn-outline" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Hubungi Kami
+                </a>
+            </div>
+
+            <div class="about-imgs fade-in">
+                <img src="image/business%20card/1.jpeg" alt="Business Card Cybernor Printing" class="span2">
+                <img src="image/flyers/1.jpeg"          alt="Flyers Cybernor Printing"        class="small">
+                <img src="image/logo/1.jpeg"            alt="Logo Design Cybernor Printing"   class="small">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ SERVIS UTAMA ═══════════ -->
+<section class="services" id="servis">
+    <div class="container">
+        <div class="tc fade-in" style="margin-bottom:52px;">
+            <span class="badge badge-green">Servis Kami</span>
+            <h2 class="section-title">Servis Cetakan Premium</h2>
+            <p class="section-sub">Kami menyediakan pelbagai servis cetakan yang disesuaikan untuk keperluan perniagaan dan peribadi anda.</p>
+        </div>
+
+        <div class="services-grid">
+
+            <!-- Business Card -->
+            <div class="scard fade-in">
+                <div class="scard-img-wrap">
+                    <img src="image/business%20card/2.jpeg" alt="Business Card" class="scard-img">
+                    <span class="scard-tag">Popular</span>
+                </div>
+                <div class="scard-body">
+                    <div class="scard-icon"><i class="fas fa-id-card"></i></div>
+                    <h3 class="scard-title">Business Card</h3>
+                    <p class="scard-desc">Kad nama adalah imej pertama anda di mata pelanggan. Jangan biarkan kad nama yang nipis dan pudar merosakkan kesan pertama anda.</p>
+                    <ul class="scard-features">
+                        <li>Art Card 260gsm berkualiti tinggi</li>
+                        <li>Matt / Gloss Lamination</li>
+                        <li>Cetakan dua belah (double sided)</li>
+                        <li>Harga pukal untuk peniaga</li>
+                    </ul>
+                    <a href="https://wa.me/601111161651?text=Saya%20ingin%20tanya%20harga%20Business%20Card." class="btn btn-outline" target="_blank" rel="noopener" style="font-size:0.8rem;padding:9px 18px;">
+                        <i class="fab fa-whatsapp"></i> Tanya Harga
+                    </a>
+                </div>
+            </div>
+
+            <!-- Flyers -->
+            <div class="scard fade-in">
+                <div class="scard-img-wrap">
+                    <img src="image/flyers/2.jpeg" alt="Flyers" class="scard-img">
+                    <span class="scard-tag">Terlaris</span>
+                </div>
+                <div class="scard-body">
+                    <div class="scard-icon"><i class="fas fa-file-image"></i></div>
+                    <h3 class="scard-title">Flyers &amp; Risalah</h3>
+                    <p class="scard-desc">Promosi anda perlu dilihat ramai. Flyers kami dicetak dengan warna terang dan jelas untuk menarik perhatian bakal pelanggan anda.</p>
+                    <ul class="scard-features">
+                        <li>Saiz A5, A4 &amp; DL tersedia</li>
+                        <li>Warna vivid &amp; tahan lama</li>
+                        <li>Sesuai untuk promosi &amp; iklan</li>
+                        <li>Harga terendah untuk kuantiti besar</li>
+                    </ul>
+                    <a href="https://wa.me/601111161651?text=Saya%20ingin%20tanya%20harga%20Flyers." class="btn btn-outline" target="_blank" rel="noopener" style="font-size:0.8rem;padding:9px 18px;">
+                        <i class="fab fa-whatsapp"></i> Tanya Harga
+                    </a>
+                </div>
+            </div>
+
+            <!-- Logo Design -->
+            <div class="scard fade-in">
+                <div class="scard-img-wrap">
+                    <img src="image/logo/2.jpeg" alt="Logo Design" class="scard-img">
+                    <span class="scard-tag">Dari RM20</span>
+                </div>
+                <div class="scard-body">
+                    <div class="scard-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3 class="scard-title">Reka Bentuk Logo</h3>
+                    <p class="scard-desc">Logo yang mantap adalah asas jenama yang kukuh. Kami reka logo korporat dan produk yang unik dan berkesan serendah RM20.</p>
+                    <ul class="scard-features">
+                        <li>Logo korporat &amp; produk</li>
+                        <li>Fail PNG, JPG &amp; PDF disertakan</li>
+                        <li>Revisi sehingga berpuas hati</li>
+                        <li>Harga dari RM20 sahaja</li>
+                    </ul>
+                    <a href="https://wa.me/601111161651?text=Saya%20ingin%20tanya%20harga%20Logo%20Design." class="btn btn-outline" target="_blank" rel="noopener" style="font-size:0.8rem;padding:9px 18px;">
+                        <i class="fab fa-whatsapp"></i> Tanya Harga
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ SEMUA SERVIS ═══════════ -->
+<section class="all-services">
+    <div class="container">
+        <div class="tc fade-in" style="margin-bottom:44px;">
+            <span class="badge badge-green">Semua Servis</span>
+            <h2 class="section-title">Kami Urus Semua Keperluan Cetakan Anda</h2>
+            <p class="section-sub">Daripada keperluan perniagaan hingga peribadi, Cybernor Printing sedia melayan.</p>
+        </div>
+
+        <div class="tiles">
+            <div class="tile fade-in"><div class="tile-icon"><i class="fas fa-id-card"></i></div><div class="tile-name">Business Card</div></div>
+            <div class="tile fade-in"><div class="tile-icon"><i class="fas fa-file-image"></i></div><div class="tile-name">Flyers</div></div>
+            <div class="tile fade-in"><div class="tile-icon"><i class="fas fa-paint-brush"></i></div><div class="tile-name">Reka Bentuk Logo</div></div>
+            <div class="tile fade-in"><div class="tile-icon"><i class="fas fa-envelope-open-text"></i></div><div class="tile-name">Sampul Raya</div></div>
+            <div class="tile fade-in"><div class="tile-icon"><i class="fas fa-flag"></i></div><div class="tile-name">Banner &amp; Bunting</div></div>
+            <div class="tile fade-in"><div class="tile-icon"><i class="fas fa-tshirt"></i></div><div class="tile-name">Sublimation T-Shirt</div></div>
+            <div class="tile fade-in"><div class="tile-icon"><i class="fas fa-heart"></i></div><div class="tile-name">Wedding Card</div></div>
+            <div class="tile fade-in"><div class="tile-icon"><i class="fas fa-tags"></i></div><div class="tile-name">Tagging Card</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ KENAPA PILIH KAMI ═══════════ -->
+<section class="why" id="kenapa">
+    <div class="container">
+        <div class="tc fade-in" style="margin-bottom:52px;position:relative;z-index:1;">
+            <span class="badge badge-light">Kelebihan Kami</span>
+            <h2 class="section-title">Kenapa Pilih Cybernor Printing?</h2>
+            <p class="section-sub">4 sebab kukuh kenapa ramai peniaga dan SME percayakan kami untuk semua keperluan cetakan mereka.</p>
+        </div>
+
+        <div class="why-grid">
+            <div class="wcard fade-in">
+                <div class="wcard-icon"><i class="fas fa-tags"></i></div>
+                <h3 class="wcard-title">Harga Pukal Paling Kompetitif</h3>
+                <p class="wcard-desc">Direka khas untuk peniaga dan PKS — semakin banyak anda cetak, semakin jimat kos anda. Tiada kos tersembunyi, harga telus dan berpatutan untuk semua.</p>
+            </div>
+            <div class="wcard fade-in">
+                <div class="wcard-icon"><i class="fas fa-star"></i></div>
+                <h3 class="wcard-title">Kualiti Premium Dijamin</h3>
+                <p class="wcard-desc">Kami menggunakan Art Card 260gsm dengan Matt atau Gloss Lamination untuk hasil cetakan yang tahan lama, profesional, dan mengesankan pelanggan anda.</p>
+            </div>
+            <div class="wcard fade-in">
+                <div class="wcard-icon"><i class="fas fa-bolt"></i></div>
+                <h3 class="wcard-title">Proses Pantas — Siap 3 Hari</h3>
+                <p class="wcard-desc">Masa adalah wang. Pesanan anda akan diproses dan dihantar dalam masa 3 hari bekerja melalui penghantaran pos yang selamat ke seluruh Malaysia.</p>
+            </div>
+            <div class="wcard fade-in">
+                <div class="wcard-icon"><i class="fas fa-palette"></i></div>
+                <h3 class="wcard-title">Reka Grafik Dari RM20 Sahaja</h3>
+                <p class="wcard-desc">Tiada rekaan sendiri? Tiada masalah! Pasukan grafik kami sedia membantu reka bentuk cetakan anda dari serendah RM20. Jimat masa, jimat wang.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ GALERI ═══════════ -->
+<section class="gallery" id="galeri">
+    <div class="container">
+        <div class="tc fade-in" style="margin-bottom:36px;">
+            <span class="badge badge-green">Portfolio</span>
+            <h2 class="section-title">Contoh Kerja Kami</h2>
+            <p class="section-sub">Lihat sendiri kualiti cetakan kami melalui koleksi kerja terpilih.</p>
+        </div>
+
+        <div class="gallery-tabs">
+            <button class="tab active" onclick="switchTab('bc',this)">Business Card</button>
+            <button class="tab"        onclick="switchTab('flyers',this)">Flyers</button>
+            <button class="tab"        onclick="switchTab('logo',this)">Logo Design</button>
+        </div>
+
+        <!-- Business Card -->
+        <div class="gallery-panel active" id="gallery-bc">
+            <div class="gitem"><img src="image/business%20card/1.jpeg" alt="Business Card 1" loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/business%20card/2.jpeg" alt="Business Card 2" loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/business%20card/3.jpeg" alt="Business Card 3" loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/business%20card/4.jpeg" alt="Business Card 4" loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/business%20card/5.jpeg" alt="Business Card 5" loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/business%20card/6.jpeg" alt="Business Card 6" loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/business%20card/7.jpeg" alt="Business Card 7" loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/business%20card/8.jpeg" alt="Business Card 8" loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+        </div>
+
+        <!-- Flyers -->
+        <div class="gallery-panel" id="gallery-flyers">
+            <div class="gitem"><img src="image/flyers/1.jpeg" alt="Flyers 1" loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/flyers/2.jpeg" alt="Flyers 2" loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/flyers/3.jpeg" alt="Flyers 3" loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/flyers/4.jpeg" alt="Flyers 4" loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+        </div>
+
+        <!-- Logo -->
+        <div class="gallery-panel" id="gallery-logo">
+            <div class="gitem"><img src="image/logo/1.jpeg"  alt="Logo 1"  loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/logo/2.jpeg"  alt="Logo 2"  loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/logo/3.jpeg"  alt="Logo 3"  loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/logo/4.jpeg"  alt="Logo 4"  loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/logo/5.jpeg"  alt="Logo 5"  loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/logo/6.jpeg"  alt="Logo 6"  loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/logo/7.jpeg"  alt="Logo 7"  loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gitem"><img src="image/logo/8.jpeg"  alt="Logo 8"  loading="lazy"><div class="gitem-over"><i class="fas fa-search-plus"></i></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ CTA ═══════════ -->
+<section class="cta" id="hubungi">
+    <div class="container">
+        <div class="cta-inner fade-in">
+            <p class="cta-eye">Jom Mulakan Perbualan</p>
+            <h2 class="cta-title">Jangan Biar Imej Perniagaan<br>Anda Ketinggalan!</h2>
+            <p class="cta-sub">Hubungi kami sekarang dan dapatkan sebutan harga <strong>PERCUMA</strong>. Tiada komitmen, tiada risiko — hanya cetakan premium yang berbaloi untuk jenama anda.</p>
+            <a href="https://wa.me/601111161651?text=Assalamualaikum%2C%20saya%20ingin%20bertanya%20mengenai%20servis%20cetakan%20Cybernor%20Printing.%20Boleh%20saya%20dapatkan%20sebutan%20harga%3F" class="btn btn-green" target="_blank" rel="noopener" style="font-size:0.95rem;padding:15px 32px;">
+                <i class="fab fa-whatsapp"></i> WhatsApp Sekarang &mdash; 011-1116 1651
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+
+            <!-- Brand -->
+            <div>
+                <div class="footer-logo-row">
+                    <img src="logo.jpeg" alt="Cybernor Printing">
+                    <div>
+                        <div class="name">Cybernor Printing</div>
+                        <div class="sub">Premium Print Solution</div>
+                    </div>
+                </div>
+                <p class="footer-desc">Menyediakan perkhidmatan cetakan premium berkualiti tinggi untuk usahawan dan perniagaan di seluruh Malaysia. Berpusat di Port Dickson, Negeri Sembilan.</p>
+                <div class="socials">
+                    <a href="https://www.facebook.com/PrintingCybernor" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/cybernor_printing" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/601111161651" class="social-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Servis -->
+            <div>
+                <h4 class="footer-col-title">Servis Kami</h4>
+                <ul class="footer-links">
+                    <li><a href="#servis">Business Card</a></li>
+                    <li><a href="#servis">Flyers &amp; Risalah</a></li>
+                    <li><a href="#servis">Reka Bentuk Logo</a></li>
+                    <li><a href="#servis">Banner &amp; Bunting</a></li>
+                    <li><a href="#servis">Sampul Raya</a></li>
+                    <li><a href="#servis">Sublimation T-Shirt</a></li>
+                    <li><a href="#servis">Wedding Card</a></li>
+                    <li><a href="#servis">Tagging Card</a></li>
+                </ul>
+            </div>
+
+            <!-- Pautan -->
+            <div>
+                <h4 class="footer-col-title">Pautan Pantas</h4>
+                <ul class="footer-links">
+                    <li><a href="#utama">Utama</a></li>
+                    <li><a href="#tentang">Tentang Kami</a></li>
+                    <li><a href="#servis">Servis</a></li>
+                    <li><a href="#galeri">Galeri</a></li>
+                    <li><a href="#kenapa">Kenapa Kami</a></li>
+                    <li><a href="#hubungi">Hubungi Kami</a></li>
+                </ul>
+            </div>
+
+            <!-- Hubungi -->
+            <div>
+                <h4 class="footer-col-title">Hubungi Kami</h4>
+                <div class="contact-row">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/601111161651" target="_blank" rel="noopener">011-1116 1651</a>
+                </div>
+                <div class="contact-row">
+                    <i class="fab fa-facebook"></i>
+                    <a href="https://www.facebook.com/PrintingCybernor" target="_blank" rel="noopener">Printing Cybernor</a>
+                </div>
+                <div class="contact-row">
+                    <i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com/cybernor_printing" target="_blank" rel="noopener">@cybernor_printing</a>
+                </div>
+                <div class="contact-row">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Port Dickson, Negeri Sembilan<br>Penghantaran Pos Seluruh Malaysia</span>
+                </div>
+                <div class="contact-row">
+                    <i class="fas fa-clock"></i>
+                    <span>Isnin – Sabtu&nbsp; 9:00 pagi – 6:00 petang</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Cybernor Printing. Hak Cipta Terpelihara.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Dasar Privasi</a>
+            <a href="#">Terma &amp; Syarat</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Navbar scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Hamburger / mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav  = document.getElementById('mobileNav');
+    let navOpen = false;
+
+    hamburger.addEventListener('click', () => {
+        navOpen = !navOpen;
+        mobileNav.style.display = navOpen ? 'block' : 'none';
+        hamburger.innerHTML = navOpen
+            ? '<i class="fas fa-times"></i>'
+            : '<i class="fas fa-bars"></i>';
+    });
+
+    function closeNav() {
+        navOpen = false;
+        mobileNav.style.display = 'none';
+        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+
+    // Smooth scroll helper
+    function scrollTo(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Gallery tabs
+    function switchTab(key, btn) {
+        document.querySelectorAll('.gallery-panel').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.getElementById('gallery-' + key).classList.add('active');
+        btn.classList.add('active');
+    }
+
+    // Anchor smooth scroll (all #links)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const target = document.querySelector(a.getAttribute('href'));
+            if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+        });
+    });
+
+    // Fade-in on scroll
+    const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
